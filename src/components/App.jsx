@@ -54,11 +54,11 @@ const App = () => {
     <div className={s.wrapper}>
       <h1 className={s.title}>My todo`s</h1>
       <Form onAdd={addTodo} />
-      <SearchBox
+      {/* <SearchBox
         value={filter}
         onFilter={setFilter}
         onClear={handleClearSearch}
-      />
+      /> */}
       <TodoList todos={filteredTodos} onDelete={deleteTodo} />
     </div>
   );

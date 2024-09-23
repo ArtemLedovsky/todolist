@@ -1,15 +1,29 @@
 .item {
-  border: 1px solid #000000;
   border-radius: 8px;
-  padding: 8px;
-  width: 800px;
+  padding: 8px 12px;
+  gap: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #1c1d20;
+  color: #cecece;
+  /* box-shadow: #cc0000b6 0px 20px 30px -10px; */
+  /* box-shadow: #cc0000b6 5px 10px 15px -5px; */
+  box-shadow: #cc0000b6 5px 5px 15px -7px;
 }
 .itemWrapper {
 }
 
 .deleteBtn {
-  height: 40px;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  color: #cecece;
+  background-color: #cc0000c6;
+  cursor: pointer;
+  transition: all 250ms ease;
+
+  &:hover {
+    background-color: #cc0000e4;
+  }
 }

@@ -14,13 +14,15 @@ const Form = ({ onAdd }) => {
     <form className={s.form} onSubmit={handleSubmit}>
       <label>
         <span>Title</span>
-        <input type="text" name="title" />
+        <input type="text" name="title" className={s.titleInput} />
       </label>
       <label>
         <span>Description</span>
-        <input type="text" name="dscr" />
+        <textarea type="text" name="dscr" className={s.dscrInput} />
       </label>
-      <button type="submit">ADD</button>
+      <button type="submit" className={s.addBtn}>
+        ADD
+      </button>
     </form>
   );
 };
