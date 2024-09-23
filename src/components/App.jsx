@@ -15,12 +15,13 @@ const INIT_TODOS = [
 const savedData = JSON.parse(window.localStorage.getItem("saved-todos"));
 
 const App = () => {
-  const [todos, setTodos] = useState(() => {
-    if (savedData.length > 0) {
-      return savedData;
-    }
-    return INIT_TODOS;
-  });
+  // const [todos, setTodos] = useState(() => {
+  //   if (savedData.length > 0) {
+  //     return savedData;
+  //   }
+  //   return INIT_TODOS;
+  // });
+  const [todos, setTodos] = useState(() => savedData ?? INIT_TODOS);
   const [filter, setFilter] = useState("");
   useEffect(() => {
     window.localStorage.setItem("saved-todos", JSON.stringify(todos));
