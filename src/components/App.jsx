@@ -4,7 +4,7 @@ import TodoList from "./TodoList/TodoList";
 import s from "./App.module.css";
 import SearchBox from "./SearchBox/SearchBox";
 
-const INIT_TODOS = [
+const INIT_TODO = [
   {
     title: "This is an example todo",
     text: "Example todo description",
@@ -15,13 +15,12 @@ const INIT_TODOS = [
 const savedData = JSON.parse(window.localStorage.getItem("saved-todos"));
 
 const App = () => {
-  // const [todos, setTodos] = useState(() => {
-  //   if (savedData.length > 0) {
-  //     return savedData;
-  //   }
-  //   return INIT_TODOS;
-  // });
-  const [todos, setTodos] = useState(() => savedData ?? INIT_TODOS);
+  const [todos, setTodos] = useState(() => {
+    if (savedData !== null && savedData.length > 0) {
+      return savedData;
+    }
+    return INIT_TODO;
+  });
   const [filter, setFilter] = useState("");
   useEffect(() => {
     window.localStorage.setItem("saved-todos", JSON.stringify(todos));
