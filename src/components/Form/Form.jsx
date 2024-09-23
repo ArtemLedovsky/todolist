@@ -14,7 +14,7 @@ const Form = ({ onAdd }) => {
     <form className={s.form} onSubmit={handleSubmit}>
       <label>
         <span>Title</span>
-        <input type="text" name="title" className={s.titleInput} />
+        <input type="text" name="title" className={s.titleInput} required />
       </label>
       <label>
         <span>Description</span>

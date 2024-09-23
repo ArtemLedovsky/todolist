@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Form from "./Form/Form";
 import TodoList from "./TodoList/TodoList";
 import s from "./App.module.css";
-import SearchBox from "./SearchBox/SearchBox";
+// import SearchBox from "./SearchBox/SearchBox";
 
 const INIT_TODO = [
   {
@@ -21,15 +21,12 @@ const App = () => {
     }
     return INIT_TODO;
   });
-  const [filter, setFilter] = useState("");
+  // const [filter, setFilter] = useState("");
   useEffect(() => {
     window.localStorage.setItem("saved-todos", JSON.stringify(todos));
   }, [todos]);
 
   const addTodo = (newTodo) => {
-    if (newTodo.title === "") {
-      return alert("Enter the Title");
-    }
     setTodos((prev) => {
       return [...prev, newTodo];
     });
@@ -41,14 +38,14 @@ const App = () => {
     });
   };
 
-  const filteredTodos = todos.filter((todo) =>
-    todo.title.toLowerCase().includes(filter.toLowerCase())
-  );
+  // const filteredTodos = todos.filter((todo) =>
+  //   todo.title.toLowerCase().includes(filter.toLowerCase())
+  // );
 
-  const handleClearSearch = (e) => {
-    e.preventDefault();
-    setFilter("");
-  };
+  // const handleClearSearch = (e) => {
+  //   e.preventDefault();
+  //   setFilter("");
+  // };
 
   return (
     <div className={s.wrapper}>
@@ -59,7 +56,7 @@ const App = () => {
         onFilter={setFilter}
         onClear={handleClearSearch}
       /> */}
-      <TodoList todos={filteredTodos} onDelete={deleteTodo} />
+      <TodoList todos={todos} onDelete={deleteTodo} />
     </div>
   );
 };

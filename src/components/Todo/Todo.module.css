@@ -9,7 +9,8 @@
   color: #cecece;
   /* box-shadow: #cc0000b6 0px 20px 30px -10px; */
   /* box-shadow: #cc0000b6 5px 10px 15px -5px; */
-  box-shadow: #cc0000b6 5px 5px 15px -7px;
+  /* box-shadow: #cc0000b6 5px 5px 15px -7px; */
+  box-shadow: #cc0000b6 0px 4px 12px -5px;
 }
 .itemWrapper {
 }
