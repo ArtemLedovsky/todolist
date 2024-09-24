@@ -47,12 +47,21 @@
   /* height: 68px; */
   min-height: 68px;
   transition: all 250ms ease;
+
   &:hover {
     border: 1px solid #fafafa7e;
   }
   &:focus {
     border: 1px solid #fafafa7e;
   }
+}
+.dscrInput::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dscrInput::-webkit-scrollbar-thumb {
+  background-color: #fafafa2f;
+  border-radius: 100px;
 }
 
 .addBtn {
