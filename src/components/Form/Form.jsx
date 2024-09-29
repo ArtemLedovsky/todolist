@@ -5,7 +5,7 @@ const Form = ({ onAdd }) => {
     onAdd({
       id: Date.now(),
       title: e.target.elements.title.value,
-      text: e.target.elements.dscr.value,
+      // text: e.target.elements.dscr.value,
     });
     e.target.reset();
   };
@@ -13,13 +13,19 @@ const Form = ({ onAdd }) => {
   return (
     <form className={s.form} onSubmit={handleSubmit}>
       <label>
-        <span>Title</span>
-        <input type="text" name="title" className={s.titleInput} required />
+        {/* <span>Title</span> */}
+        <input
+          type="text"
+          name="title"
+          className={s.titleInput}
+          required
+          placeholder="Type something..."
+        />
       </label>
-      <label>
+      {/* <label>
         <span>Description</span>
         <textarea type="text" name="dscr" className={s.dscrInput} />
-      </label>
+      </label> */}
       <button type="submit" className={s.addBtn}>
         ADD
       </button>

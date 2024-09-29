@@ -1,24 +1,20 @@
 .wrapper {
-  padding: 24px;
+}
+.title {
+  font-size: 48px;
+  color: #dddddd;
+  background-color: #2a2929;
+  padding: 4px 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.contentWrapper {
   display: flex;
   flex-direction: column;
   gap: 24px;
   align-items: center;
   min-height: 100vh;
-  background-color: #111213;
-}
-.title {
-  font-size: 48px;
-  color: #cecece;
-  box-shadow: 1px 1px 20px #cecece;
-  border-radius: 20px;
-  padding: 4px 8px;
-  width: 80%;
-  text-align: center;
-}
-
-@media screen and (min-width: 568px) {
-  .title {
-    width: 420px;
-  }
+  background-color: #dddddd;
+  padding: 24px;
 }

@@ -8,9 +8,9 @@
   max-width: 800px;
   margin: 0 auto;
   align-items: center;
-  background-color: #1c1d20;
-  color: #cecece;
-  box-shadow: #cc0000b6 0px 4px 12px -5px;
+  background-color: #dddddd;
+  color: #2a2929;
+  border: 2px solid #2a2929;
 }
 .itemWrapper {
   word-break: break-word;
@@ -21,11 +21,16 @@
   border-radius: 4px;
   border: none;
   color: #cecece;
-  background-color: #cc0000c6;
+  background-color: #2a2929;
   cursor: pointer;
   transition: all 250ms ease;
 
   &:hover {
-    background-color: #cc0000e4;
+    background-color: rgba(63, 63, 63, 0.92);
   }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
 }

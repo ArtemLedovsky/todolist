@@ -7,7 +7,7 @@ import s from "./App.module.css";
 const INIT_TODO = [
   {
     title: "This is an example todo",
-    text: "Example todo description",
+    // text: "Example todo description",
     id: "example-id",
   },
 ];
@@ -49,14 +49,16 @@ const App = () => {
 
   return (
     <div className={s.wrapper}>
-      <h1 className={s.title}>My todo`s</h1>
-      <Form onAdd={addTodo} />
-      {/* <SearchBox
+      <h1 className={s.title}>My todo list</h1>
+      <div className={s.contentWrapper}>
+        <Form onAdd={addTodo} />
+        {/* <SearchBox
         value={filter}
         onFilter={setFilter}
         onClear={handleClearSearch}
       /> */}
-      <TodoList todos={todos} onDelete={deleteTodo} />
+        <TodoList todos={todos} onDelete={deleteTodo} />
+      </div>
     </div>
   );
 };
